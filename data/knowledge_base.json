@@ -1,0 +1,10 @@
+{
+  "AI": {
+    "definition": "Artificial Intelligence is the simulation of human intelligence by machines.",
+    "applications": ["Healthcare", "Finance", "Education"]
+  },
+  "Python": {
+    "creator": "Guido van Rossum",
+    "release_year": 1991
+  }
+}
