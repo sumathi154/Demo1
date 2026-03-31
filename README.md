@@ -32,4 +32,97 @@ It integrates reasoning, memory, and tool orchestration (Agentic AI) with creati
   - Example: "Python function to calculate factorial."
 
 - **Image Generation (`/generate_image`)**  
-  - Creates images from text
+  - Creates images from text descriptions.  
+  - Example: "AI robot teaching students in a classroom."
+
+---
+
+## 🛠️ Tech Stack
+- **FastAPI** → Web framework for building APIs  
+- **Pydantic** → Request validation  
+- **Groq API / LLMs** → Generative AI backend  
+- **Python** → Core language  
+- **Uvicorn** → ASGI server  
+
+---
+
+## 📂 Project Structure
+Demo1/
+│── server.py        # FastAPI app with endpoints
+│── agent.py         # Agent logic (reasoning + generative calls)
+│── requirements.txt # Dependencies
+│── README.md        # Documentation
+
+Code
+
+---
+
+## ▶️ Running the Project
+
+1. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+Set environment variables
+
+Add your API key in .env:
+
+Code
+GROQ_API_KEY=your_api_key_here
+Run the server
+
+bash
+uvicorn server:app --reload
+Open Swagger UI
+
+Code
+http://127.0.0.1:8000/docs
+📡 Example Usage
+Summarization
+json
+POST /summarize
+{
+  "text": "Artificial Intelligence is a broad field that includes machine learning, natural language processing, robotics, and more."
+}
+Sentiment
+json
+POST /sentiment
+{
+  "text": "I love learning AI!"
+}
+Text Generation
+json
+POST /generate_text
+{
+  "query": "Write a short poem about AI"
+}
+Code Generation
+json
+POST /generate_code
+{
+  "query": "Python function to calculate factorial"
+}
+Image Generation
+json
+POST /generate_image
+{
+  "query": "AI robot teaching students in a classroom"
+}
+📖 Concepts Covered
+Endpoint	Feature Type	Concept
+/ask	Agentic AI	Reasoning, memory, tool orchestration
+/summarize	AI	NLP → Text Summarization
+/sentiment	AI	Classification → Sentiment Analysis
+/generate_text	Generative AI	LLMs → Creative Text Generation
+/generate_code	Generative AI	LLMs → Code Generation
+/generate_image	Generative AI	Diffusion Models → Text-to-Image
+🌟 Learning Roadmap
+NLP Basics → Summarization, sentiment analysis
+
+Machine Learning → Classification, predictions
+
+LLMs (Generative AI) → Text & code generation
+
+Diffusion Models → Image generation
+
+Agentic AI → Combining tools, memory, reasoning
+
